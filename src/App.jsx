@@ -1,6 +1,7 @@
 import Banner from "./components/Banner";
 import Opportunities from "./components/Opportunities";
 import Navbar from "./components/Navbar";
+import { Analytics } from "@vercel/analytics/react";
 
 const App = () => {
   return (
@@ -8,6 +9,7 @@ const App = () => {
       <Navbar />
       <Banner />
       <Opportunities />
+      <Analytics />
     </div>
   );
 };
