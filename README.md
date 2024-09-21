@@ -1,9 +1,5 @@
-# React + Vite
+# Crypto Critox
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Critox Banner](https://i.ibb.co.com/bNtymB3/image.png)
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-"# Crypto-Critox" 
+Critox is a cutting-edge crypto platform designed to provide the latest insights, tools, and services in the cryptocurrency world. Whether you're a seasoned trader or a crypto enthusiast, Critox offers the resources you need to navigate the dynamic landscape of digital currencies.
