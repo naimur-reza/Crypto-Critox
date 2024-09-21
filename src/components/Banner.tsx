@@ -45,7 +45,7 @@ const Banner = () => {
       <div>
         <img
           src={bitcoin}
-          className="absolute left-[5%] bottom-10 animate-slow-reverse"
+          className="absolute left-[5%] lg:bottom-[5%] -bottom-[35%]  animate-slow-reverse  "
           alt="bitcoin"
         />
       </div>
