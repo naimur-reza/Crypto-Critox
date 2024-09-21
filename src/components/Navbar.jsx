@@ -1,4 +1,3 @@
-import React from "react";
 import logo from "../assets/icons/logo.png";
 import { useState } from "react";
 
@@ -66,9 +65,9 @@ const Navbar = () => {
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             className="icon icon-tabler icon-tabler-menu-2"
           >
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -80,7 +79,7 @@ const Navbar = () => {
 
         {/* Sidebar */}
         <div
-          className={`fixed  top-0 left-0 h-full w-[250px] bg-gray-900 transform ${
+          className={`fixed  top-0 left-0 h-full w-[250px] bg-[#09131D] transform ${
             isOpen ? "translate-x-0" : "-translate-x-full"
           } transition-transform duration-300 ease-in-out z-50`}
         >

@@ -1,8 +1,9 @@
-import React from "react";
+import { useEffect, useRef, useState } from "react";
 import hero from "../assets/icons/hero.png";
 import globe from "../assets/icons/globe.png";
 import bitcoin from "../assets/icons/bitcoin.png";
 import ellipse from "../assets/icons/ellipse-2.png";
+import rocket from "../assets/icons/rocket.png";
 
 const Banner = () => {
   const info = [
@@ -24,8 +25,44 @@ const Banner = () => {
     },
   ];
 
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const rocketRef = useRef(null);
+  const [rocketVisible, setRocketVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset;
+      const maxScroll =
+        document.documentElement.scrollHeight - window.innerHeight;
+      const scrollFraction = scrollTop / maxScroll;
+
+      // Check rocket visibility
+      const rocketRect = rocketRef.current.getBoundingClientRect();
+      if (rocketRect.top < window.innerHeight && rocketRect.bottom > 0) {
+        setRocketVisible(true);
+      }
+
+      // Start moving the rocket only if it is visible
+      if (rocketVisible) {
+        setScrollPosition(scrollFraction);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [rocketVisible]);
+
+  const rocketStyle = {
+    transform: `
+      translateX(${scrollPosition * 250}%)
+      translateY(${scrollPosition * -250}%)
+    `,
+  };
+
   return (
-    <section className="overflow-hidden relative  flex items-center justify-center pt-[50px]">
+    <section className="overflow-hidden relative  flex items-center justify-center pt-[70px]">
       {/* Background 3D Images */}
       <img
         src={globe}
@@ -41,7 +78,15 @@ const Banner = () => {
       <img
         src={ellipse}
         className="absolute hidden lg:block right-0 bottom-0"
-        alt="bitcoin"
+        alt="ellipse"
+      />
+
+      <img
+        src={rocket}
+        style={rocketStyle}
+        ref={rocketRef}
+        className="absolute  transition-transform  duration-75 hidden w-[170px] lg:block left-[-5%] -z-[3] bottom-[-5%]"
+        alt="rocket"
       />
 
       <div>
@@ -76,10 +121,10 @@ const Banner = () => {
             {info.map((item, index) => (
               <div
                 key={index}
-                className="col-span-6 lg:col-span-3 lg:pl-8 py-2 w-full text-start "
+                className="col-span-6 lg:col-span-3 lg:pl-8 py-2 w-full text-start space-y-4"
               >
                 <p className="lg:text-2xl text-xl font-bold">{item.count}</p>
-                <p className="text-gray-300 lg:font-medium text-sm">
+                <p className="text-gray-300  font-medium text-sm lg:text-base">
                   {item.title}
                 </p>
               </div>
@@ -91,6 +136,7 @@ const Banner = () => {
 
         <div className="max-lg:hidden w-[250px] xxl:w-[350px] h-[250px] xxl:h-[350px] absolute top-[6%] blur-[85px] left-[-12%] bg-[#3a96ff]/50" />
         <div className="max-lg:hidden w-[250px] xxl:w-[350px] h-[250px] xxl:h-[350px] absolute bottom-[6%] blur-[85px] right-[-8%] bg-[#12CE95]/50"></div>
+        <div className="max-lg:hidden w-[250px] h-[204px] xxl:w-[404px] xxl:h-[404px] absolute bottom-[-15%] blur-[85px] -z-[4] left-[-12%] bg-[rgba(240,185,11,0.50)]" />
       </div>
     </section>
   );

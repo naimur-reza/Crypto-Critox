@@ -48,3 +48,16 @@ body {
 .navbar-logo {
   @apply w-24 lg:w-fit;
 }
+
+.move-rocket-top {
+  animation: move-rocket-top 2s linear infinite;
+}
+
+@keyframes move-rocket-top {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
