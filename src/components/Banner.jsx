@@ -6,7 +6,7 @@ import rocket from "../assets/icons/rocket.png";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { info } from "autoprefixer";
+import { info } from "../constant/info";
 
 gsap.registerPlugin(ScrollTrigger);
 
