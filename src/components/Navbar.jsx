@@ -1,5 +1,7 @@
+import { useGSAP } from "@gsap/react";
 import logo from "../assets/icons/logo.png";
 import { useState } from "react";
+import gsap from "gsap";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,6 +37,28 @@ const Navbar = () => {
     },
   ];
 
+  useGSAP(() => {
+    const tl = gsap.timeline();
+
+    tl.from(".navbar-logo", {
+      opacity: 0,
+      y: 30,
+      duration: 0.7,
+    });
+
+    tl.from(".navbar-items li", {
+      opacity: 0,
+      duration: 1,
+      stagger: 0.1,
+    });
+
+    tl.from(".btn-animate", {
+      opacity: 0,
+      y: -40,
+      duration: 1,
+    });
+  });
+
   return (
     <div className=" z-10 py-4 xxl:py-6 border-b border-gray-800 fixed top-0 left-0 right-0 w-full  bg-black">
       <div className="container flex items-center justify-between">
@@ -42,7 +66,7 @@ const Navbar = () => {
           <img src={logo} alt="logo" />
         </div>
         <div className="navbar-menu">
-          <ul className="hidden lg:flex items-center gap-4  font-medium">
+          <ul className="hidden navbar-items lg:flex items-center gap-4  font-medium">
             {menuItems.map((item, index) => (
               <li key={index}>
                 <a href={item.link}>{item.name}</a>

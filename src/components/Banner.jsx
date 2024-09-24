@@ -1,65 +1,28 @@
-import { useEffect, useRef, useState } from "react";
 import hero from "../assets/icons/hero.png";
 import globe from "../assets/icons/globe.png";
 import bitcoin from "../assets/icons/bitcoin.png";
 import ellipse from "../assets/icons/ellipse-2.png";
 import rocket from "../assets/icons/rocket.png";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { info } from "autoprefixer";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Banner = () => {
-  const info = [
-    {
-      count: "200+",
-      title: "Countries Coverd",
-    },
-    {
-      count: "30 Million",
-      title: "Global Investors",
-    },
-    {
-      count: "700+",
-      title: "Coins",
-    },
-    {
-      count: "$1.36 Billion",
-      title: "24h Trading Volume",
-    },
-  ];
-
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const rocketRef = useRef(null);
-  const [rocketVisible, setRocketVisible] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.pageYOffset;
-      const maxScroll =
-        document.documentElement.scrollHeight - window.innerHeight;
-      const scrollFraction = scrollTop / maxScroll;
-
-      // Check rocket visibility
-      const rocketRect = rocketRef.current.getBoundingClientRect();
-      if (rocketRect.top < window.innerHeight && rocketRect.bottom > 0) {
-        setRocketVisible(true);
-      }
-
-      // Start moving the rocket only if it is visible
-      if (rocketVisible) {
-        setScrollPosition(scrollFraction);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [rocketVisible]);
-
-  const rocketStyle = {
-    transform: `
-      translateX(${scrollPosition * 250}%)
-      translateY(${scrollPosition * -250}%)
-    `,
-  };
+  useGSAP(() => {
+    gsap.to(".rocket-animate", {
+      x: 300,
+      y: -300,
+      scrollTrigger: {
+        trigger: ".rocket-animate",
+        start: "top 90%",
+        end: "bottom center",
+        scrub: 1,
+      },
+    });
+  });
 
   return (
     <section className="overflow-hidden relative  flex items-center justify-center pt-[70px]">
@@ -83,9 +46,7 @@ const Banner = () => {
 
       <img
         src={rocket}
-        style={rocketStyle}
-        ref={rocketRef}
-        className="absolute  transition-transform  duration-75 hidden w-[170px] lg:block left-[-5%] -z-[3] bottom-[-5%]"
+        className="absolute   hidden w-[170px] lg:block left-[-5%] -z-[3] bottom-[-5%] rocket-animate"
         alt="rocket"
       />
 
