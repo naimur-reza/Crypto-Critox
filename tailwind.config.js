@@ -5,6 +5,7 @@ export default {
     extend: {
       backgroundColor: {
         darkBlue: "rgb(15, 30, 46)",
+        darkBlue2: "rgb(9, 19, 29)",
       },
     },
   },

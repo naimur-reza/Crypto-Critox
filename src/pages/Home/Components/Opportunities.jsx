@@ -11,12 +11,12 @@ const Opportunities = () => {
   return (
     <div className="min-h-screen container py-100">
       <div className="grid grid-cols-12 mb-10 lg:mb-[70px] gap-5">
-        <h1 className="col-span-12 md:col-span-12 xl:col-span-4 text-xl lg:text-3xl font-bold tracking-wide opportunities-title">
+        <h1 className="col-span-12 md:col-span-12 xl:col-span-4 title-head opportunities-title">
           Find your next <span className="text-blue-500 underline">crypto</span>{" "}
           opportunity
         </h1>
 
-        <p className="col-span-12 md:col-span-12 xl:col-span-4 xl:col-start-9   text-dark text-xs md:text-base opportunities-description">
+        <p className="col-span-12 md:col-span-12 xl:col-span-4 xl:col-start-9   subtitle opportunities-description">
           Our comprehensive cybersecurity platform, driven by artificial
           intelligence, not only safeguards your organization.
         </p>

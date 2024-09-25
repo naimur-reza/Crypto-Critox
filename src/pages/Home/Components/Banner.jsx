@@ -1,6 +1,7 @@
 import { info } from "../../../constant/info";
 import { useBannerAnimations } from "../../../animation/Home/useBannerAnimations";
 import assets from "../../../assets";
+import Button from "../../../components/Button";
 
 const Banner = () => {
   // Banner Animations
@@ -46,12 +47,8 @@ const Banner = () => {
               crypto asset exchange.
             </p>
             <div className="flex gap-4 justify-center lg:justify-start">
-              <div className="border border-blue-500 group  hover:border-white rounded-full transition-all duration-500 p-0.5 w-fit">
-                <button className="btn-primary ">Connect Wallet</button>
-              </div>
-              <div className="border border-blue-500 group  hover:border-white transition-all duration-500 rounded-full p-0.5 w-fit ">
-                <button className="btn-accent">Explore More</button>
-              </div>
+              <Button>Connect Wallet</Button>
+              <Button variant="accent">Explore More</Button>
             </div>
           </div>
           <div className="  lg:p-4 col-span-12 lg:col-span-5 lg:col-start-8 relative max-lg:flex max-lg:justify-center ">

@@ -4,6 +4,7 @@ import { useState } from "react";
 import gsap from "gsap";
 import { Link, NavLink } from "react-router-dom";
 import { menuItems } from "../../constant/menuItems";
+import Button from "../Button";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,9 +62,7 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <div className="navbar-actions border border-blue-500 group  hover:border-white rounded-full ml-auto mr-2 lg:m-0 transition-all duration-500 p-0.5 w-fit ">
-          <button className="btn-primary">Connect Wallet</button>
-        </div>
+        <Button>Connect Wallet</Button>
 
         {/* mobile menu */}
         {/* Sidebar Button for Mobile */}

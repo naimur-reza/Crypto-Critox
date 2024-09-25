@@ -1,11 +1,16 @@
-const Button = ({ children, className, onClick }) => {
+/* eslint-disable react/prop-types */
+const Button = ({
+  children,
+  className = "btn-primary-container",
+  onClick,
+  variant = "primary",
+}) => {
   return (
-    <button
-      className={`${className} bg-blue-500 text-white px-4 py-2 rounded-md`}
-      onClick={onClick}
-    >
-      {children}
-    </button>
+    <div className={className}>
+      <button className={`btn-${variant}`} onClick={onClick}>
+        {children}
+      </button>
+    </div>
   );
 };
 

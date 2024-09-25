@@ -20,12 +20,28 @@ body {
   @apply max-w-6xl mx-auto px-4;
 }
 
+.btn-primary-container {
+  @apply border border-blue-500  rounded-full transition-all duration-500 p-0.5 w-fit;
+}
+
+.btn-primary-container:hover {
+  @apply border-white;
+}
+
+.btn-primary-container:hover .btn-primary {
+  @apply bg-transparent;
+}
+
 .btn-primary {
-  @apply bg-blue-500  text-white px-2 py-1 text-sm lg:text-base lg:px-4 lg:py-2 rounded-full    group-hover:bg-transparent font-semibold transition-all duration-500;
+  @apply bg-blue-500  text-white px-2 py-1 text-sm lg:text-[15px] lg:px-4 lg:py-3 rounded-full group-hover:bg-transparent font-medium transition-all duration-500;
 }
 
 .btn-accent {
-  @apply text-white px-2 py-1 text-sm lg:text-base lg:px-4 lg:py-2 rounded-full  bg-[#3a96ff]/20 group-hover:bg-transparent transition-all duration-500;
+  @apply text-white px-2 py-1 text-sm lg:text-[15px] lg:px-4 lg:py-3  rounded-full  bg-[#3a96ff]/20 group-hover:bg-transparent transition-all duration-500;
+}
+
+.btn-accent:hover {
+  @apply bg-transparent;
 }
 
 .text-dark {
@@ -55,4 +71,21 @@ body {
 
 .py-100 {
   @apply py-[100px];
+}
+
+.title-head {
+  @apply text-xl lg:text-3xl font-bold tracking-wide;
+}
+
+.subtitle {
+  @apply text-dark text-xs md:text-base;
+}
+
+ 
+.selector {
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
