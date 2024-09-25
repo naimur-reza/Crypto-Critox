@@ -1,6 +1,6 @@
 import globe from "../assets/icons/opportunities/globe.png";
 import { opportunities } from "../constant/opportunities";
-import OpportunityAnimation from "../animation/Home/Opportunity";
+import OpportunityAnimation from "../animation/Home/useOpportunityAnimation";
 
 const Opportunities = () => {
   OpportunityAnimation();
@@ -52,7 +52,7 @@ const Opportunities = () => {
               <div className="flex justify-end pb-3">
                 <img
                   src={item.image}
-                  className="object-cover"
+                  className={item.imageStyle}
                   alt={item.title}
                 />
               </div>

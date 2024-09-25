@@ -9,6 +9,7 @@ export const opportunities = [
     title: "Trade Algorithm",
     description: "Your assets. On your terms. At your fingertips",
     image: trade,
+    imageStyle: "-mt-6",
   },
   {
     id: 2,
@@ -22,6 +23,7 @@ export const opportunities = [
     description:
       "Count on us for round-the-clock support, help whenever you need it.",
     image: support,
+    imageStyle: "mt-5",
   },
   {
     id: 2,
