@@ -1,10 +1,10 @@
-import hero from "../assets/icons/hero.png";
-import globe from "../assets/icons/globe.png";
-import bitcoin from "../assets/icons/bitcoin.png";
-import ellipse from "../assets/icons/ellipse-2.png";
-import rocket from "../assets/icons/rocket.png";
-import { info } from "../constant/info";
-import { useBannerAnimations } from "../animation/Home/useBannerAnimations";
+import hero from "../../../assets/icons/hero.png";
+import globe from "../../../assets/icons/globe.png";
+import bitcoin from "../../../assets/icons/bitcoin.png";
+import ellipse from "../../../assets/icons/ellipse-2.png";
+import rocket from "../../../assets/icons/rocket.png";
+import { info } from "../../../constant/info";
+import { useBannerAnimations } from "../../../animation/Home/useBannerAnimations";
 
 const Banner = () => {
   // Banner Animations

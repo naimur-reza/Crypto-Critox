@@ -1,9 +1,9 @@
 import { useGSAP } from "@gsap/react";
-import logo from "../assets/icons/logo.png";
+import logo from "../../assets/icons/logo.png";
 import { useState } from "react";
 import gsap from "gsap";
 import { Link, NavLink } from "react-router-dom";
-import { menuItems } from "../constant/menuItems";
+import { menuItems } from "../../constant/menuItems";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

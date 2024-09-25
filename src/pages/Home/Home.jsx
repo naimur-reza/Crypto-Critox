@@ -1,5 +1,5 @@
-import Banner from "../components/Banner";
-import Opportunities from "../components/Opportunities";
+import Banner from "./Components/Banner";
+import Opportunities from "./Components/Opportunities";
 
 const Home = () => {
   return (

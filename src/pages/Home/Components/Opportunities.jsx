@@ -1,6 +1,6 @@
-import globe from "../assets/icons/opportunities/globe.png";
-import { opportunities } from "../constant/opportunities";
-import OpportunityAnimation from "../animation/Home/useOpportunityAnimation";
+import globe from "../../../assets/icons/opportunities/globe.png";
+import { opportunities } from "../../../constant/opportunities";
+import OpportunityAnimation from "../../../animation/Home/useOpportunityAnimation";
 
 const Opportunities = () => {
   OpportunityAnimation();
