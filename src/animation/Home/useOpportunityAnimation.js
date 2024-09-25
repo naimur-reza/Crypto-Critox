@@ -7,7 +7,7 @@ const OpportunityAnimation = (opportunitiesCardsRef) => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".opportunities-title",
-          start: "top 90%",
+          start: "top 50%",
           end: "bottom center",
         },
       });

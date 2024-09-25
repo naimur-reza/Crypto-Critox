@@ -1,10 +1,6 @@
-import hero from "../../../assets/icons/hero.png";
-import globe from "../../../assets/icons/globe.png";
-import bitcoin from "../../../assets/icons/bitcoin.png";
-import ellipse from "../../../assets/icons/ellipse-2.png";
-import rocket from "../../../assets/icons/rocket.png";
 import { info } from "../../../constant/info";
 import { useBannerAnimations } from "../../../animation/Home/useBannerAnimations";
+import assets from "../../../assets";
 
 const Banner = () => {
   // Banner Animations
@@ -14,24 +10,24 @@ const Banner = () => {
     <section className="overflow-hidden relative  flex items-center justify-center pt-[70px]">
       {/* Background 3D Images */}
       <img
-        src={globe}
+        src={assets.icons.globe}
         className="absolute hidden lg:block top-[20%] right-8 animate-slow-spin"
         alt="globe"
       />
 
       <img
-        src={bitcoin}
+        src={assets.icons.bitcoin}
         className="absolute   left-[5%]  bottom-[30%]  animate-slow-reverse  "
         alt="bitcoin"
       />
       <img
-        src={ellipse}
+        src={assets.icons.ellipse}
         className="absolute hidden lg:block right-0 bottom-0"
         alt="ellipse"
       />
 
       <img
-        src={rocket}
+        src={assets.icons.rocket}
         className="absolute   hidden w-[170px] lg:block left-[-5%] -z-[3] bottom-[-5%] rocket-animate"
         alt="rocket"
       />
@@ -59,7 +55,11 @@ const Banner = () => {
             </div>
           </div>
           <div className="  lg:p-4 col-span-12 lg:col-span-5 lg:col-start-8 relative max-lg:flex max-lg:justify-center ">
-            <img className="relative z-[3] banner-img" src={hero} alt="Hero" />
+            <img
+              className="relative z-[3] banner-img"
+              src={assets.icons.hero}
+              alt="Hero"
+            />
             <div className="w-[280px] h-[280px] md:w-[350px] md:h-[350px] absolute top-[6%] blur-[85px] left-0 bg-[#3a96ff]/50" />
           </div>
 
