@@ -46,5 +46,23 @@ export const useBannerAnimations = () => {
     tl.from(".banner-btn", {
       opacity: 0,
     });
+
+    tl.from(
+      ".coin-animate",
+      {
+        opacity: 0,
+        duration: 2,
+      },
+      "<"
+    );
+
+    tl.from(
+      ".globe-animate",
+      {
+        opacity: 0,
+        duration: 2,
+      },
+      "<"
+    );
   });
 };

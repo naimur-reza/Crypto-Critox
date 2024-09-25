@@ -52,3 +52,7 @@ body {
 .navbar-logo {
   @apply w-24 lg:w-fit;
 }
+
+.py-100 {
+  @apply py-[100px];
+}

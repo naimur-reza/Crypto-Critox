@@ -11,13 +11,13 @@ const Banner = () => {
       {/* Background 3D Images */}
       <img
         src={assets.icons.globe}
-        className="absolute hidden lg:block top-[20%] right-8 animate-slow-spin"
+        className="absolute hidden lg:block top-[20%] right-8  globe-animate animate-slow-spin"
         alt="globe"
       />
 
       <img
         src={assets.icons.bitcoin}
-        className="absolute   left-[5%]  bottom-[30%]  animate-slow-reverse  "
+        className="absolute   left-[5%]  bottom-[30%]  coin-animate   animate-slow-reverse"
         alt="bitcoin"
       />
       <img

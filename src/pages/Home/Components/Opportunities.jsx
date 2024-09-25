@@ -9,11 +9,11 @@ const Opportunities = () => {
   OpportunityAnimation(opportunitiesCardsRef);
 
   return (
-    <div className="min-h-screen container pt-[100px]">
-      <div className="grid grid-cols-12 mb-10 lg:mb-[60px] gap-5">
+    <div className="min-h-screen container py-100">
+      <div className="grid grid-cols-12 mb-10 lg:mb-[70px] gap-5">
         <h1 className="col-span-12 md:col-span-12 xl:col-span-4 text-xl lg:text-3xl font-bold tracking-wide opportunities-title">
-          Find your next{" "}
-          <span className="text-blue-500 underline ">crypto</span> opportunity
+          Find your next <span className="text-blue-500 underline">crypto</span>{" "}
+          opportunity
         </h1>
 
         <p className="col-span-12 md:col-span-12 xl:col-span-4 xl:col-start-9   text-dark text-xs md:text-base opportunities-description">

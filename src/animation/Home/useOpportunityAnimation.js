@@ -2,29 +2,29 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 const OpportunityAnimation = (opportunitiesCardsRef) => {
-  useGSAP(
-    () => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".opportunities-title",
-          start: "top 50%",
-          end: "bottom center",
-        },
-      });
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".opportunities-title",
+        start: "top 50%",
+        end: "bottom center",
+      },
+    });
 
-      tl.from(".opportunities-title", {
-        opacity: 0,
-        y: 30,
-        duration: 0.5,
-      });
+    tl.from(".opportunities-title", {
+      opacity: 0,
+      y: 30,
+      duration: 0.5,
+    });
 
-      tl.from(".opportunities-description", {
-        opacity: 0,
-        y: 30,
-        duration: 0.5,
-      });
+    tl.from(".opportunities-description", {
+      opacity: 0,
+      y: 30,
+      duration: 0.5,
+    });
 
-      gsap.utils.toArray(".opportunities-card").forEach((card) => {
+    gsap.utils.toArray(".opportunities-card").forEach(
+      (card) => {
         gsap.fromTo(
           card,
           {
@@ -43,10 +43,10 @@ const OpportunityAnimation = (opportunitiesCardsRef) => {
             },
           }
         );
-      });
-    },
-    { scope: opportunitiesCardsRef }
-  );
+      },
+      { scope: opportunitiesCardsRef }
+    );
+  });
 };
 
 export default OpportunityAnimation;
