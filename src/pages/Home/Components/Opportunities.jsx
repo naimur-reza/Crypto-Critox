@@ -1,9 +1,12 @@
 import globe from "../../../assets/icons/opportunities/globe.png";
 import { opportunities } from "../../../constant/opportunities";
 import OpportunityAnimation from "../../../animation/Home/useOpportunityAnimation";
+import { useRef } from "react";
 
 const Opportunities = () => {
-  OpportunityAnimation();
+  const opportunitiesCardsRef = useRef(null);
+
+  OpportunityAnimation(opportunitiesCardsRef);
 
   return (
     <div className="min-h-screen container pt-[100px]">
@@ -19,7 +22,7 @@ const Opportunities = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-12 gap-5 ">
+      <div ref={opportunitiesCardsRef} className="grid grid-cols-12 gap-5 ">
         <div className="col-span-12 md:col-span-5 lg:col-span-4 rounded-xl row-span-2 flex flex-col justify-between bg-darkBlue opportunities-card">
           <div className="p-6 space-y-3">
             <h1 className="text-xl text-zinc-200">Receive up to</h1>
