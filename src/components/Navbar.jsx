@@ -2,40 +2,11 @@ import { useGSAP } from "@gsap/react";
 import logo from "../assets/icons/logo.png";
 import { useState } from "react";
 import gsap from "gsap";
+import { Link, NavLink } from "react-router-dom";
+import { menuItems } from "../constant/menuItems";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const menuItems = [
-    {
-      name: "Buy Crypto",
-      link: "/buy-crypto",
-    },
-    {
-      name: "Sell Crypto",
-      link: "/sell-crypto",
-    },
-    {
-      name: "Swap",
-      link: "/swap",
-    },
-    {
-      name: "Coin Market",
-      link: "/coin-market",
-    },
-    {
-      name: "Earn",
-      link: "/earn",
-    },
-    {
-      name: "Pages",
-      link: "/pages",
-    },
-  ];
 
   useGSAP(() => {
     const tl = gsap.timeline();
@@ -51,13 +22,28 @@ const Navbar = () => {
       duration: 1,
       stagger: 0.1,
     });
-
-    tl.from(".btn-animate", {
-      opacity: 0,
-      y: -40,
-      duration: 1,
-    });
   });
+
+  useGSAP(() => {
+    if (isOpen) {
+      const tl = gsap.timeline();
+
+      tl.from(".sidebar-logo", {
+        opacity: 0,
+        y: 30,
+        duration: 0.7,
+      });
+
+      tl.from(".animate-link", {
+        opacity: 0,
+        x: -40,
+        duration: 0.5,
+        stagger: 0.1,
+      });
+    }
+  }, [isOpen]);
+
+  const toggleSidebar = () => setIsOpen(!isOpen);
 
   return (
     <div className=" z-10 py-4 xxl:py-6 border-b border-gray-800 fixed top-0 left-0 right-0 w-full  bg-black">
@@ -107,10 +93,10 @@ const Navbar = () => {
             isOpen ? "translate-x-0" : "-translate-x-full"
           } transition-transform duration-300 ease-in-out z-50`}
         >
-          <div className="flex justify-between items-center p-4 border-b border-gray-700">
-            <div className="navbar-logo">
-              <img src={logo} alt="logo" />
-            </div>
+          <div className="flex  justify-between items-center p-4 border-b border-gray-700">
+            <Link to="/" className="sidebar-logo">
+              <img src={logo} alt="logo" className="w-24" />
+            </Link>
             <button
               onClick={toggleSidebar}
               className="text-white text-2xl focus:outline-none"
@@ -120,9 +106,9 @@ const Navbar = () => {
           </div>
           <nav className="flex flex-col p-4 space-y-3">
             {menuItems.map((item, index) => (
-              <a key={index} href={item.link}>
+              <NavLink key={index} to={item.link} className="animate-link">
                 {item.name}
-              </a>
+              </NavLink>
             ))}
           </nav>
         </div>
