@@ -40,6 +40,7 @@ const Web3Products = () => {
             breakpoints={{
               320: {
                 slidesPerView: 1,
+                spaceBetween: 20,
               },
               480: {
                 slidesPerView: 2,

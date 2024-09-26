@@ -23,7 +23,7 @@ const Banner = () => {
       />
       <img
         src={assets.icons.ellipse}
-        className="absolute hidden lg:block right-0 bottom-0"
+        className="absolute hidden lg:block right-0 bottom-0 z-[2] selector"
         alt="ellipse"
       />
 
