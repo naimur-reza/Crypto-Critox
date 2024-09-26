@@ -1,19 +1,26 @@
+import useWeb3Animation from "../../../animation/Home/useWeb3Animation";
 import { marketData } from "../../../constant/cryptoMarket";
 
+import { useRef } from "react";
+
 const CryptoMarket = () => {
+  const containerRef = useRef(null);
+
+  useWeb3Animation(containerRef);
+
   return (
-    <div className="min-h-screen">
+    <div ref={containerRef} className="min-h-screen">
       <div className="container py-100">
         <div className="flex justify-between flex-wrap gap-4 items-center mb-10 xl:mb-[60px]">
-          <h1 className="title-head">
+          <h1 className="title-head heading-title">
             Crypto Market <span className="text-blue-500">Today</span>
           </h1>
-          <button className="text-yellow-500 text-sm hover:underline lg:text-lg font-semibold">
+          <button className="text-yellow-500 text-sm hover:underline lg:text-lg font-semibold sub-text">
             View all 750+ Coins
           </button>
         </div>
 
-        <div className="grid grid-cols-12 gap-5 ">
+        <div className="grid grid-cols-12 gap-5 cards-animate">
           {marketData.map((market, idx) => (
             <div
               key={idx}
@@ -25,7 +32,7 @@ const CryptoMarket = () => {
                 </h1>
               </div>
 
-              <div className="space-y-4 lg:space-y-6 xl:space-y-8">
+              <div className="space-y-4 lg:space-y-6 xl:space-y-8 ">
                 {market.data.map((item, idx) => (
                   <div key={idx} className="flex items-center justify-between">
                     <div className="flex items-center gap-4">

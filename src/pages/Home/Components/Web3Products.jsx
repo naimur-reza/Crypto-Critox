@@ -4,22 +4,29 @@ import "swiper/css";
 import web3Data from "../../../constant/web3";
 import assets from "../../../assets";
 import { Navigation, Autoplay } from "swiper/modules";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "swiper/css/scrollbar";
 import SwiperButtons from "./SwiperButtons";
+import { useRef } from "react";
+import useWeb3Animation from "../../../animation/Home/useWeb3Animation";
 
 const Web3Products = () => {
+  const containerRef = useRef(null);
+
+  useWeb3Animation(containerRef);
+
   return (
-    <section className="min-h-screen bg-darkBlue2 py-14 lg:py-36 relative overflow-hidden">
+    <section
+      ref={containerRef}
+      className="min-h-screen bg-darkBlue2 py-14 lg:py-36 relative overflow-hidden"
+    >
       <div className="container ">
         <div className="flex  justify-between flex-col lg:flex-row gap-5">
           <div className="max-w-lg">
-            <h1 className="title-head">
+            <h1 className="title-head heading-title">
               Explore CritoX
               <span className="text-blue-500 underline">Web3</span> Products
             </h1>
-            <p className="subtitle mt-3">
+            <p className="subtitle mt-3 sub-text">
               Coin CritoX is the easiest, safest, and fastest way to buy & sell
               crypto asset exchange.
             </p>
@@ -30,7 +37,7 @@ const Web3Products = () => {
           </div>
         </div>
 
-        <div className="flex justify-center items-center pt-20">
+        <div className="flex justify-center items-center pt-20 cards-animate">
           <Swiper
             modules={[Navigation, Autoplay]}
             autoplay={{
@@ -51,7 +58,7 @@ const Web3Products = () => {
                 spaceBetween: 20,
               },
             }}
-            className="mySwiper"
+            className="mySwiper cards-animate"
           >
             {web3Data.map((item, index) => (
               <SwiperSlide key={index}>
@@ -78,7 +85,7 @@ const Web3Products = () => {
 
       <img
         src={assets.icons.globe}
-        className="absolute hidden z-[2] lg:block top-5 right-5  globe-animate animate-slow-spin selector"
+        className="absolute hidden z-[2] lg:block top-5 right-5  globe-animate animate-slow-spin selector globe-animate"
         alt="globe"
       />
       <img
