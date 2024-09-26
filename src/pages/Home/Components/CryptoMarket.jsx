@@ -38,7 +38,7 @@ const CryptoMarket = () => {
                     <div className="flex items-center gap-4">
                       <img src={item.icon} alt="bitcoin" />
                       <div>
-                        <h1 className="text-lg font-medium text-gray-200">
+                        <h1 className="lg:text-lg font-medium text-gray-200">
                           {item.name}
                         </h1>
                         <p className="text-sm text-gray-400">{item.symbol}</p>
@@ -46,10 +46,10 @@ const CryptoMarket = () => {
                     </div>
 
                     <div className="text-end">
-                      <p className="text-lg font-medium text-gray-200">
+                      <p className="lg:text-lg font-medium text-gray-200">
                         ${item.price}
                       </p>
-                      <p className="text-sm text-gray-400 font-medium">
+                      <p className="lg:text-sm text-xs text-gray-400 font-medium">
                         {item.change.includes("-") ? (
                           <span className="text-red-500">{item.change}</span>
                         ) : (
