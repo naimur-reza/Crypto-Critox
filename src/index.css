@@ -33,7 +33,7 @@ body {
 }
 
 .btn-primary {
-  @apply bg-blue-500  text-white px-2 py-1 text-sm lg:text-[15px] lg:px-4 lg:py-3 rounded-full group-hover:bg-transparent font-medium transition-all duration-500;
+  @apply px-2 py-1 text-sm lg:text-[15px] lg:px-4 lg:py-3 rounded-full group-hover:bg-transparent font-medium transition-all duration-500;
 }
 
 .btn-accent {
@@ -81,7 +81,6 @@ body {
   @apply text-dark text-xs md:text-base;
 }
 
- 
 .selector {
   -webkit-user-drag: none;
   user-select: none;

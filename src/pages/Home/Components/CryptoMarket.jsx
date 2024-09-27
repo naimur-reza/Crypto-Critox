@@ -13,7 +13,7 @@ const CryptoMarket = () => {
       <div className="container py-100">
         <div className="flex justify-between flex-wrap gap-4 items-center mb-10 xl:mb-[60px]">
           <h1 className="title-head heading-title">
-            Crypto Market <span className="text-blue-500">Today</span>
+            Crypto Market <span className="text-primary">Today</span>
           </h1>
           <button className="text-yellow-500 text-sm hover:underline lg:text-lg font-semibold sub-text">
             View all 750+ Coins

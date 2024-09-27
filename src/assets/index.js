@@ -4,6 +4,8 @@ import globe from "./icons/globe.png";
 import bitcoin from "./icons/bitcoin.png";
 import ellipse from "./icons/ellipse-2.png";
 import rocket from "./icons/rocket.png";
+import howToStart from "./icons/how-start.png";
+import howToStart2 from "./icons/how-start-2.png";
 
 // opportunities
 import trade from "./icons/opportunities/trade.png";
@@ -48,6 +50,8 @@ const assets = {
     bitcoin,
     ellipse,
     rocket,
+    howToStart,
+    howToStart2,
   },
   opportunities: {
     trade,

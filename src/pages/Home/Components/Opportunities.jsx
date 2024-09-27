@@ -12,7 +12,7 @@ const Opportunities = () => {
     <div className="min-h-screen container py-100">
       <div className="grid grid-cols-12 mb-10 lg:mb-[70px] gap-5">
         <h1 className="col-span-12 md:col-span-12 xl:col-span-4 title-head opportunities-title">
-          Find your next <span className="text-blue-500 underline">crypto</span>{" "}
+          Find your next <span className="text-primary underline">crypto</span>{" "}
           opportunity
         </h1>
 

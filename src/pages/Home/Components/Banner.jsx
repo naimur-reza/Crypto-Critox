@@ -38,7 +38,7 @@ const Banner = () => {
           <div className="  py-20  col-span-12 lg:col-span-6">
             <h1 className="lg:text-5xl text-3xl  font-bold banner-title">
               Find the Next Crypto Gem on{" "}
-              <span className="text-blue-500 underline">
+              <span className="text-primary underline">
                 Crito<span className="text-yellow-500 underline">X</span>
               </span>
             </h1>

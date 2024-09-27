@@ -24,7 +24,7 @@ const Web3Products = () => {
           <div className="max-w-lg">
             <h1 className="title-head heading-title">
               Explore CritoX
-              <span className="text-blue-500 underline">Web3</span> Products
+              <span className="text-primary underline">Web3</span> Products
             </h1>
             <p className="subtitle mt-3 sub-text">
               Coin CritoX is the easiest, safest, and fastest way to buy & sell
@@ -63,14 +63,14 @@ const Web3Products = () => {
             {web3Data.map((item, index) => (
               <SwiperSlide key={index}>
                 <div className="bg-darkBlue2 group hover:bg-darkBlue transition-colors duration-200 p-8 rounded-xl text-center space-y-4 border border-zinc-600/30 ">
-                  <div className="border w-fit mx-auto p-4 border-blue-500 rounded-full group-hover:bg-blue-500 transition-colors duration-200 mb-6">
+                  <div className="border w-fit mx-auto p-4 border-blue-500 rounded-full group-hover:bg-primary transition-colors duration-200 mb-6">
                     <img src={item.img} alt={item.title} />
                   </div>
                   <h3 className="text-lg font-bold text-white">{item.title}</h3>
                   <p className="text-white line-clamp-2 subtitle">
                     {item.description}
                   </p>
-                  <h3 className="lg:text-lg text-base font-medium text-white group-hover:underline group-hover:text-blue-500  cursor-pointer pt-3">
+                  <h3 className="lg:text-lg text-base font-medium text-white group-hover:underline group-hover:text-primary  cursor-pointer pt-3">
                     View Details
                   </h3>
                 </div>
