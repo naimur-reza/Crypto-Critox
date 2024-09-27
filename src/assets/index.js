@@ -42,6 +42,20 @@ import senso from "./icons/market/senso.png";
 import hydra from "./icons/market/hydra.png";
 import storj from "./icons/market/xec.png";
 
+// trusted partner
+
+import item1 from "./icons/partners/item-1.png";
+import item2 from "./icons/partners/item-2.png";
+import item3 from "./icons/partners/item-3.png";
+import item4 from "./icons/partners/item-4.png";
+import item5 from "./icons/partners/item-5.png";
+import item6 from "./icons/partners/item-6.png";
+import item7 from "./icons/partners/item-7.png";
+import item8 from "./icons/partners/item-8.png";
+import item9 from "./icons/partners/item-9.png";
+import item10 from "./icons/partners/item-10.png";
+import item11 from "./icons/partners/item-11.png";
+
 const assets = {
   icons: {
     logo,
@@ -86,6 +100,20 @@ const assets = {
     hydra,
     storj,
   },
+
+  partners: [
+    item1,
+    item2,
+    item3,
+    item4,
+    item5,
+    item6,
+    item7,
+    item8,
+    item9,
+    item10,
+    item11,
+  ],
 };
 
 export default assets;
