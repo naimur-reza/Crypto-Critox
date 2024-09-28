@@ -4,6 +4,7 @@ import GetStart from "./Components/GetStart";
 import Opportunities from "./Components/Opportunities";
 import TrustedBy from "./Components/TrustedBy";
 import Web3Products from "./Components/Web3Products";
+import NewsArticle from "./Components/NewsArticle";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <CryptoMarket />
       <GetStart />
       <TrustedBy />
+      <NewsArticle />
     </div>
   );
 };

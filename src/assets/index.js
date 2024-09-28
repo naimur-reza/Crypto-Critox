@@ -56,6 +56,12 @@ import item9 from "./icons/partners/item-9.png";
 import item10 from "./icons/partners/item-10.png";
 import item11 from "./icons/partners/item-11.png";
 
+// blogs
+
+import blog1 from "./blogs/blog-1.png";
+import blog2 from "./blogs/blog-2.png";
+import blog3 from "./blogs/blog-3.png";
+
 const assets = {
   icons: {
     logo,
@@ -114,6 +120,12 @@ const assets = {
     item10,
     item11,
   ],
+
+  blogs: {
+    blog1,
+    blog2,
+    blog3,
+  },
 };
 
 export default assets;
