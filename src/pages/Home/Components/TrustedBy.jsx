@@ -16,7 +16,7 @@ const TrustedBy = () => {
             {assets.partners.map((item, index) => (
               <div key={index} className="will-change-transform">
                 <img
-                  className="mr-8 w-24 lg:w-auto lg:mr-14 z-[3] partner-item"
+                  className="mr-8 w-24 lg:w-auto lg:mr-20 z-[3] partner-item"
                   src={item}
                   alt="partners"
                 />
@@ -29,7 +29,7 @@ const TrustedBy = () => {
             {assets.partners.reverse().map((item, index) => (
               <div key={index} className="will-change-transform">
                 <img
-                  className="mr-8 w-24 lg:w-auto lg:mr-14 z-[3] partner-item"
+                  className="mr-8 w-24 lg:w-auto lg:mr-20 z-[3] partner-item"
                   src={item}
                   alt="partners"
                 />

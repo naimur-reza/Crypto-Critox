@@ -1,12 +1,53 @@
+import { useRef } from "react";
 import assets from "../../../assets";
 import Button from "../../../components/Button";
 import { howToStart } from "../../../constant/howToStart";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
 
 const GetStart = () => {
+  const containerRef = useRef(null);
+
+  useGSAP(
+    () => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top center",
+          end: "bottom center",
+        },
+      });
+
+      tl.from(".heading-title", {
+        opacity: 0,
+        duration: 0.6,
+        ease: "power2.out",
+        stagger: 0.3,
+      });
+
+      tl.from(".items-container", {
+        opacity: 0,
+        duration: 0.5,
+        ease: "power2.out",
+      });
+
+      tl.from(".items", {
+        opacity: 0,
+        duration: 1,
+        ease: "power2.out",
+        stagger: 0.3,
+      });
+    },
+    { scope: containerRef }
+  );
+
   return (
-    <div className="bg-darkBlue text-white relative overflow-hidden">
+    <div
+      ref={containerRef}
+      className="bg-darkBlue text-white relative overflow-hidden"
+    >
       <div className="container min-h-screen py-100">
-        <h1 className="title-head text-center">
+        <h1 className="title-head text-center heading-title">
           How To Get <span className="text-primary underline">Started</span>
         </h1>
 
@@ -26,11 +67,11 @@ const GetStart = () => {
         <div className="max-lg:hidden w-[250px] xxl:w-[350px] h-[250px] xxl:h-[350px] absolute bottom-[-5%] -left-[8%] blur-[85px]   bg-[#12ffb8]/50" />
 
         {/* process items */}
-        <div className="grid grid-cols-12 gap-4 xl:gap-6 z-[2] relative text-center after:w-full after:h-full after:xl:h-[90%] after:absolute after:left-0 after:rounded-xl after:top-0 after:xl:top-[5%] after:bg-darkBlue2 after:z-[-1] mt-10">
+        <div className="grid grid-cols-12 gap-4 xl:gap-6 z-[2] relative text-center after:w-full after:h-full after:xl:h-[90%] after:absolute after:left-0 after:rounded-xl after:top-0 after:xl:top-[5%] after:bg-darkBlue2 after:z-[-1] mt-10 items-container">
           {howToStart.map((item) => (
             <div
               key={item.id}
-              className={`col-span-12 md:col-span-6 lg:col-span-3 text-center  space-y-7 py-10 px-5 ${
+              className={`col-span-12 md:col-span-6 lg:col-span-3 text-center  space-y-7 py-10 px-5 items ${
                 item.id == 1 ? "bg-primary rounded-xl" : ""
               }`}
             >
