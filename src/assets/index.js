@@ -6,6 +6,8 @@ import ellipse from "./icons/ellipse-2.png";
 import rocket from "./icons/rocket.png";
 import howToStart from "./icons/how-start.png";
 import howToStart2 from "./icons/how-start-2.png";
+import tryPng from "./icons/try.png";
+import tryEl from "./icons/try-el-1.png";
 
 // opportunities
 import trade from "./icons/opportunities/trade.png";
@@ -72,6 +74,8 @@ const assets = {
     rocket,
     howToStart,
     howToStart2,
+    tryPng,
+    tryEl,
   },
   opportunities: {
     trade,
