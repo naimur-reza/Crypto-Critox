@@ -5,9 +5,12 @@ const NewsArticle = () => {
   return (
     <div>
       <div className="container py-100">
-        <h1 className="title-head mb-10 xl:mb-[60px] ">
-          News & <span className="text-primary underline">Article</span>
-        </h1>
+        <div className="flex items-center justify-between mb-10 xl:mb-[60px] ">
+          <h1 className="title-head ">
+            News & <span className="text-primary underline">Article</span>
+          </h1>
+          <Button>View More</Button>
+        </div>
 
         <div className="grid grid-cols-12 gap-5">
           {blogs.map((item, index) => (
