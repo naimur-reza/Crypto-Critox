@@ -37,9 +37,9 @@ const Navbar = () => {
 
       tl.from(".animate-link", {
         opacity: 0,
-        x: -40,
+        y: -10,
         duration: 0.5,
-        stagger: 0.1,
+        stagger: 0.2,
       });
     }
   }, [isOpen]);
@@ -103,9 +103,13 @@ const Navbar = () => {
               &times;
             </button>
           </div>
-          <nav className="flex flex-col p-4 space-y-3">
+          <nav className="flex flex-col p-4 space-y-5">
             {menuItems.map((item, index) => (
-              <NavLink key={index} to={item.link} className="animate-link">
+              <NavLink
+                key={index}
+                to={item.link}
+                className="animate-link text-lg font-medium "
+              >
                 {item.name}
               </NavLink>
             ))}

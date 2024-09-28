@@ -18,7 +18,7 @@ const NewsArticle = () => {
               key={index}
               className={`${
                 index === 0 ? "row-span-2 flex-col" : "lg:flex-row flex-col"
-              } col-span-12 lg:col-span-6 bg-darkBlue flex gap-5 p-6 rounded-2xl items-center`}
+              } col-span-12 lg:col-span-6 bg-darkBlue flex gap-5 p-4 rounded-2xl items-center`}
             >
               <img
                 src={item.image}
@@ -28,10 +28,12 @@ const NewsArticle = () => {
                 alt={item.title}
               />
               <div className="space-y-4">
-                <h3 className="text-xl font-bold">{item.title}</h3>
-                <p className="text-gray-300 text-[15px] tracking-wide">
-                  {item.description}
-                </p>
+                <div className="pl-1 space-y-5">
+                  <h3 className="text-xl font-bold">{item.title}</h3>
+                  <p className="text-gray-300 text-[15px] tracking-wide">
+                    {item.description}
+                  </p>
+                </div>
                 <Button
                   bg="white"
                   text="primary"
