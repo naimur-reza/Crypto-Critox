@@ -89,7 +89,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="text-center text-gray-300  mt-10 py-8 border-t border-gray-800 text-base lg:text-lg font-medium footer-animate">
+      <div className="text-center text-gray-300  mt-10 py-8 border-t border-gray-800 text-sm lg:text-lg font-medium footer-animate">
         Copyright @ 2024 CritoX | Designed By Pixelaxis
       </div>
 
