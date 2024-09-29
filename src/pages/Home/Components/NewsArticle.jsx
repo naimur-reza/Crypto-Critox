@@ -1,11 +1,43 @@
 import Button from "../../../components/Button";
 import blogs from "../../../constant/blogs";
 
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
 const NewsArticle = () => {
+  const newsRef = useRef(null);
+
+  useGSAP(() => {
+    gsap.utils.toArray(".news-animate").forEach(
+      (card) => {
+        gsap.fromTo(
+          card,
+          {
+            opacity: 0,
+            y: 30,
+          },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            scrollTrigger: {
+              trigger: card,
+              start: "top 70%",
+              end: "bottom 20%",
+              toggleActions: "play pause resume pause",
+            },
+          }
+        );
+      },
+      { scope: newsRef }
+    );
+  });
+
   return (
-    <div>
-      <div className="container py-100">
-        <div className="flex items-center justify-between mb-10 xl:mb-[60px] ">
+    <div ref={newsRef}>
+      <div className="container py-100 ">
+        <div className="flex items-center justify-between mb-10 xl:mb-[60px] news-animate">
           <h1 className="title-head ">
             News & <span className="text-primary underline">Article</span>
           </h1>
@@ -18,7 +50,7 @@ const NewsArticle = () => {
               key={index}
               className={`${
                 index === 0 ? "row-span-2 flex-col" : "lg:flex-row flex-col"
-              } col-span-12 lg:col-span-6 bg-darkBlue flex gap-5 p-4 rounded-2xl items-center`}
+              } col-span-12 lg:col-span-6 bg-darkBlue flex gap-5 p-4 rounded-2xl items-center news-animate `}
             >
               <img
                 src={item.image}

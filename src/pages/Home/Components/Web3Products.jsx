@@ -37,7 +37,7 @@ const Web3Products = () => {
           </div>
         </div>
 
-        <div className="flex justify-center items-center pt-20 cards-animate">
+        <div className="flex justify-center items-center pt-20">
           <Swiper
             modules={[Navigation, Autoplay]}
             autoplay={{

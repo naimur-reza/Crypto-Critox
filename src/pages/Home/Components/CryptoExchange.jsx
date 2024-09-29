@@ -2,9 +2,45 @@ import { useGSAP } from "@gsap/react";
 import assets from "../../../assets";
 import Button from "../../../components/Button";
 import gsap from "gsap";
+import { useRef } from "react";
 
 const CryptoExchange = () => {
+  const textContainerRef = useRef(null);
+
   useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: textContainerRef.current,
+        start: "top 70%",
+        end: "bottom 20%",
+        toggleActions: "play pause resume pause",
+      },
+    });
+
+    tl.from(".try-png", {
+      opacity: 0,
+      y: 30,
+    });
+
+    tl.fromTo(
+      textContainerRef.current,
+      {
+        opacity: 0,
+        y: 30,
+      },
+      {
+        opacity: 1,
+        y: 0,
+      }
+    );
+
+    tl.from(".globe-animate", {
+      opacity: 0,
+    });
+    tl.from(".try-el", {
+      opacity: 0,
+    });
+
     gsap.fromTo(
       ".try-el",
       {
@@ -21,12 +57,12 @@ const CryptoExchange = () => {
   });
 
   return (
-    <div className="py-100 relative bg-darkBlue2 overflow-hidden">
+    <div className="py-100 relative  overflow-hidden">
       <div className="container grid grid-cols-12 items-center place-items-center gap-7">
-        <div className="col-span-12 lg:col-span-5">
+        <div className="col-span-12 lg:col-span-5 try-png">
           <img src={assets.icons.tryPng} alt="try_png" />
         </div>
-        <div className="col-span-12 lg:col-span-7 ">
+        <div ref={textContainerRef} className="col-span-12 lg:col-span-7 ">
           <h1 className="text-xl lg:text-3xl font-semibold pb-3 ">
             Try Our Crypto{" "}
             <span className="text-primary underline ">CritoX</span> Exchange Now
@@ -59,7 +95,7 @@ const CryptoExchange = () => {
         alt="try_el"
       />
       <img
-        className="hidden lg:block absolute right-10 top-10 z-[2] globe_el animate-slow-spin"
+        className="hidden lg:block absolute right-10 top-10 z-[2] globe_el animate-slow-spin globe-animate"
         src={assets.icons.globe}
         alt="try_el"
       />

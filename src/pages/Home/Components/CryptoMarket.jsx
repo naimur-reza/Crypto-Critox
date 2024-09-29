@@ -20,11 +20,11 @@ const CryptoMarket = () => {
           </button>
         </div>
 
-        <div className="grid grid-cols-12 gap-5 cards-animate">
+        <div className="grid grid-cols-12 gap-5 ">
           {marketData.map((market, idx) => (
             <div
               key={idx}
-              className="col-span-12 lg:col-span-6  border p-5 border-gray-600/50 rounded-lg"
+              className="col-span-12 lg:col-span-6  border p-5 border-gray-600/50 rounded-lg cards-animate"
             >
               <div className="mb-5 pb-5 border-b-2 border-gray-600/50">
                 <h1 className=" font-bold  text-lg pl-4 border-l-4 border-[#12FFB8]">

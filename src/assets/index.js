@@ -8,7 +8,9 @@ import howToStart from "./icons/how-start.png";
 import howToStart2 from "./icons/how-start-2.png";
 import tryPng from "./icons/try.png";
 import tryEl from "./icons/try-el-1.png";
+import footerEl from "./icons/footer-el-2.png";
 
+// opportunities
 // opportunities
 import trade from "./icons/opportunities/trade.png";
 import trusted from "./icons/opportunities/trusted.png";
@@ -76,6 +78,7 @@ const assets = {
     howToStart2,
     tryPng,
     tryEl,
+    footerEl,
   },
   opportunities: {
     trade,
