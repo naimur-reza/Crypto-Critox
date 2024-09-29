@@ -46,7 +46,7 @@ const Banner = () => {
               Coin CritoX is the easiest, safest, and fastest way to buy & sell
               crypto asset exchange.
             </p>
-            <div className="flex gap-4 justify-center lg:justify-start">
+            <div className="flex gap-4 justify-center lg:justify-start btn-animate">
               <Button>Connect Wallet</Button>
               <Button variant="accent">Explore More</Button>
             </div>

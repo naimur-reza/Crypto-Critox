@@ -11,7 +11,7 @@ const CryptoExchange = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: textContainerRef.current,
-        start: "top 70%",
+        start: "top 45%",
         end: "bottom 20%",
         toggleActions: "play pause resume pause",
       },

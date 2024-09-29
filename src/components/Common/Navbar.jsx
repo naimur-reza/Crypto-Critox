@@ -13,6 +13,7 @@ const Navbar = () => {
     const tl = gsap.timeline();
 
     tl.from(".navbar-logo", {
+      delay: 0.3,
       opacity: 0,
       y: 30,
       duration: 0.7,
@@ -41,6 +42,10 @@ const Navbar = () => {
         duration: 0.5,
         stagger: 0.2,
       });
+
+      tl.from(".btn-animate", {
+        opacity: 0,
+      });
     }
   }, [isOpen]);
 
@@ -62,7 +67,9 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <Button>Connect Wallet</Button>
+        <div className="btn-animate">
+          <Button>Connect Wallet</Button>
+        </div>
 
         {/* mobile menu */}
         {/* Sidebar Button for Mobile */}
@@ -96,12 +103,14 @@ const Navbar = () => {
             <Link to="/" className="sidebar-logo">
               <img src={logo} alt="logo" className="w-24" />
             </Link>
-            <button
-              onClick={toggleSidebar}
-              className="text-white text-2xl focus:outline-none"
-            >
-              &times;
-            </button>
+            <div className="btn-animate">
+              <button
+                onClick={toggleSidebar}
+                className="text-white text-2xl focus:outline-none"
+              >
+                &times;
+              </button>
+            </div>
           </div>
           <nav className="flex flex-col p-4 space-y-5">
             {menuItems.map((item, index) => (

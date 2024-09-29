@@ -23,7 +23,7 @@ const NewsArticle = () => {
             duration: 0.6,
             scrollTrigger: {
               trigger: card,
-              start: "top 70%",
+              start: "top 45%",
               end: "bottom 20%",
               toggleActions: "play pause resume pause",
             },

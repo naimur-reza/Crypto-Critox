@@ -21,10 +21,10 @@ export const useBannerAnimations = () => {
     const tl = gsap.timeline();
 
     tl.from(".banner-title", {
-      delay: 0.7,
+      delay: 0.5,
       opacity: 0,
       y: 15,
-      duration: 0.6,
+      duration: 0.5,
     });
 
     tl.from(
@@ -43,7 +43,7 @@ export const useBannerAnimations = () => {
       duration: 0.5,
     });
 
-    tl.from(".banner-btn", {
+    tl.from(".btn-animate", {
       opacity: 0,
     });
 

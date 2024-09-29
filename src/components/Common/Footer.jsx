@@ -28,7 +28,7 @@ const Footer = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: footerRef.current,
-        start: "top 70%",
+        start: "top 50%",
         end: "bottom 20%",
         toggleActions: "play pause resume pause",
       },
