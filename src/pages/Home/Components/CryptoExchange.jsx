@@ -13,7 +13,6 @@ const CryptoExchange = () => {
         trigger: textContainerRef.current,
         start: "top 45%",
         end: "bottom 20%",
-        toggleActions: "play pause resume pause",
       },
     });
 
@@ -22,17 +21,10 @@ const CryptoExchange = () => {
       y: 30,
     });
 
-    tl.fromTo(
-      textContainerRef.current,
-      {
-        opacity: 0,
-        y: 30,
-      },
-      {
-        opacity: 1,
-        y: 0,
-      }
-    );
+    tl.from(textContainerRef.current, {
+      opacity: 0,
+      y: 30,
+    });
 
     tl.from(".globe-animate", {
       opacity: 0,
