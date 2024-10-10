@@ -66,6 +66,11 @@ import blog1 from "./blogs/blog-1.png";
 import blog2 from "./blogs/blog-2.png";
 import blog3 from "./blogs/blog-3.png";
 
+// auth
+
+import login from "./icons/login.png";
+import signUp from "./icons/sign-up.png";
+
 const assets = {
   icons: {
     logo,
@@ -79,6 +84,8 @@ const assets = {
     tryPng,
     tryEl,
     footerEl,
+    login,
+    signUp,
   },
   opportunities: {
     trade,

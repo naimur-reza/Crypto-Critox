@@ -18,12 +18,12 @@ const CryptoExchange = () => {
 
     tl.from(".try-png", {
       opacity: 0,
-      y: 30,
+      y: 20,
     });
 
     tl.from(textContainerRef.current, {
       opacity: 0,
-      y: 30,
+      y: 20,
     });
 
     tl.from(".globe-animate", {
