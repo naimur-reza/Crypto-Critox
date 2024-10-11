@@ -55,14 +55,16 @@ const Navbar = () => {
     <div className=" z-10 py-4 xxl:py-6 border-b border-gray-800 fixed top-0 left-0 right-0 w-full  bg-black">
       <div className="container flex items-center justify-between">
         <div className="navbar-logo">
-          <img src={logo} alt="logo" />
+          <Link to={"/"}>
+            <img src={logo} alt="logo" />
+          </Link>
         </div>
         <div className="navbar-menu">
           <ul className="hidden navbar-items lg:flex items-center gap-4  font-medium">
             {menuItems.map((item, index) => (
-              <li key={index}>
-                <a href={item.link}>{item.name}</a>
-              </li>
+              <Link key={index} to={item.link}>
+                {item.name}
+              </Link>
             ))}
           </ul>
         </div>

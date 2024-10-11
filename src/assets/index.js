@@ -9,6 +9,7 @@ import howToStart2 from "./icons/how-start-2.png";
 import tryPng from "./icons/try.png";
 import tryEl from "./icons/try-el-1.png";
 import footerEl from "./icons/footer-el-2.png";
+import notFound from "./404.png";
 
 // opportunities
 // opportunities
@@ -140,6 +141,7 @@ const assets = {
     blog2,
     blog3,
   },
+  notFound,
 };
 
 export default assets;

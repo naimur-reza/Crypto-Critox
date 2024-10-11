@@ -5,11 +5,13 @@ import BuyCrypto from "../pages/Buy-Crypto/BuyCrypto";
 import SellCrypto from "../pages/Sell-Crypto/SellCrypto";
 import Login from "../pages/Auth/Login";
 import SignUp from "../pages/Auth/Signup";
+import NotFound from "../components/Common/NotFound";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
+    errorElement: <NotFound />,
     children: [
       {
         path: "/",
