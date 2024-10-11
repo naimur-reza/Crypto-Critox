@@ -2,6 +2,7 @@ import { info } from "../../../constant/info";
 import { useBannerAnimations } from "../../../animation/Home/useBannerAnimations";
 import assets from "../../../assets";
 import Button from "../../../components/Button";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   // Banner Animations
@@ -47,7 +48,9 @@ const Banner = () => {
               crypto asset exchange.
             </p>
             <div className="flex gap-4 justify-center lg:justify-start btn-animate">
-              <Button>Connect Wallet</Button>
+              <Link to={"/login"}>
+                <Button>Connect Wallet</Button>
+              </Link>
               <Button variant="accent">Explore More</Button>
             </div>
           </div>

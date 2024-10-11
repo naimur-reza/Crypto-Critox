@@ -68,7 +68,9 @@ const Navbar = () => {
         </div>
 
         <div className="btn-animate">
-          <Button>Connect Wallet</Button>
+          <Link to={"/login"}>
+            <Button>Connect Wallet</Button>
+          </Link>
         </div>
 
         {/* mobile menu */}

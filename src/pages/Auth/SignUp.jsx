@@ -5,12 +5,12 @@ const SignUp = () => {
   return (
     <div className=" bg-darkBlue2 relative overflow-hidden">
       <div className="grid grid-cols-12 gap-2 items-center">
-        <div className="col-span-12 lg:col-span-7 bg-black pt-10 pb-10 lg:pr-20 lg:pl-10 px-2 lg:px-0">
+        <div className="col-span-12 lg:col-span-7 bg-black1 pt-10 pb-10 lg:pr-20 lg:pl-10 px-2 lg:px-0">
           <Link to="/">
             <img src={assets.icons.logo} alt="logo" />
           </Link>
-          <div className="lg:ml-10 z-[5] bg-black border rounded-2xl border-gray-800 p-6 relative mt-5">
-            <h1 className="text-center pb-8 font-bold text-3xl">SignUp</h1>
+          <div className="lg:ml-10 z-[5] bg-black1 border rounded-2xl border-gray-800 p-6 relative mt-5">
+            <h1 className="text-center pb-8 font-bold text-3xl">Sign Up</h1>
             <div className="flex items-center  gap-4 text-xs">
               <button className="w-full py-3 px-2 rounded-xl border border-gray-800">
                 Continue with Google
@@ -96,7 +96,7 @@ const SignUp = () => {
                 <span className="underline font-semibold">Reset</span>
               </p>
               <button className="w-full py-3 lg:py-5 rounded-2xl bg-blue-500 text-white font-semibold hover:bg-blue-600 transition-all ">
-                SignUp
+                Sign Up
               </button>
             </form>
             <p className="mt-4 text-sm text-gray-300 text-center">
